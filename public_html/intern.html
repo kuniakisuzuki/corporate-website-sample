@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>生成AI×Webシステム開発インターン募集 | coderless inc.</title>
+  <meta name="description" content="未経験OKの生成AI×Webシステム開発インターン募集ページです。AIを仕事の道具として使いながら、要望整理、タスク分解、実装、動作確認まで実務フローを体験できます。" />
+  <meta property="og:title" content="生成AI×Webシステム開発インターン募集 | coderless inc." />
+  <meta property="og:description" content="未経験OK。生成AIを使いながら、Webシステム開発の実務フローを体験できるインターンです。" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.coderless.co.jp/intern.html" />
+  <meta property="og:image" content="https://www.coderless.co.jp/assets/ogp.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="canonical" href="https://www.coderless.co.jp/intern.html" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&family=Noto+Sans+JP:wght@400;500;700;800&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --color-primary: #2563EB;
+      --color-primary-dark: #1D4ED8;
+      --color-text: #111827;
+      --color-subtext: #4B5563;
+      --color-border: #E5E7EB;
+      --color-bg: #F8FAFC;
+      --color-surface: #FFFFFF;
+      --color-accent: #DBEAFE;
+      --shadow-sm: 0 8px 24px rgba(15, 23, 42, 0.08);
+      --shadow-md: 0 20px 40px rgba(37, 99, 235, 0.12);
+      --radius-lg: 20px;
+      --radius-md: 14px;
+      --container: 1120px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: "Noto Sans JP", sans-serif;
+      color: var(--color-text);
+      background: linear-gradient(180deg, #EFF6FF 0%, #FFFFFF 22%, #F8FAFC 100%);
+      line-height: 1.7;
+    }
+
+    a { color: inherit; }
+    img { max-width: 100%; height: auto; }
+
+    .container {
+      width: min(calc(100% - 32px), var(--container));
+      margin: 0 auto;
+    }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      backdrop-filter: blur(12px);
+      background: rgba(255, 255, 255, 0.88);
+      border-bottom: 1px solid rgba(229, 231, 235, 0.9);
+    }
+
+    .header-inner {
+      min-height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .brand img {
+      height: 40px;
+      width: auto;
+      display: block;
+    }
+
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    .header-link,
+    .btn,
+    .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      text-decoration: none;
+      border-radius: 999px;
+      font-weight: 700;
+      transition: .2s ease;
+      white-space: nowrap;
+    }
+
+    .header-link {
+      color: var(--color-subtext);
+      padding: 10px 14px;
+    }
+
+    .btn {
+      background: var(--color-primary);
+      color: #fff;
+      padding: 12px 20px;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .btn:hover,
+    .btn:focus-visible {
+      background: var(--color-primary-dark);
+      transform: translateY(-1px);
+    }
+
+    .btn-secondary {
+      background: #fff;
+      color: var(--color-primary);
+      border: 1px solid var(--color-border);
+      padding: 12px 20px;
+    }
+
+    .btn-secondary:hover,
+    .btn-secondary:focus-visible {
+      border-color: #BFDBFE;
+      background: #F8FBFF;
+    }
+
+    .hero {
+      padding: 72px 0 48px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap: 32px;
+      align-items: stretch;
+    }
+
+    .hero-copy,
+    .hero-card,
+    .section-card,
+    .info-card,
+    .flow-card,
+    .cta-card {
+      background: var(--color-surface);
+      border: 1px solid rgba(219, 234, 254, 0.9);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .hero-copy {
+      padding: 40px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 16px;
+      padding: 8px 14px;
+      background: var(--color-accent);
+      color: var(--color-primary-dark);
+      border-radius: 999px;
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    h1, h2, h3 {
+      line-height: 1.25;
+      margin: 0;
+    }
+
+    h1 {
+      font-size: clamp(32px, 5vw, 52px);
+      letter-spacing: -0.02em;
+      margin-bottom: 16px;
+    }
+
+    .lead {
+      margin: 0 0 24px;
+      color: var(--color-subtext);
+      font-size: clamp(16px, 2vw, 18px);
+    }
+
+    .hero-points {
+      display: grid;
+      gap: 12px;
+      margin: 0 0 28px;
+      padding: 0;
+      list-style: none;
+    }
+
+    .hero-points li,
+    .feature-list li,
+    .task-list li,
+    .gain-list li,
+    .condition-list li {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+    }
+
+    .material-symbols-outlined {
+      font-size: 22px;
+      line-height: 1;
+      color: var(--color-primary);
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .button-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .hero-card {
+      padding: 28px;
+      background: linear-gradient(180deg, #FFFFFF 0%, #EFF6FF 100%);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .hero-card h2 {
+      font-size: 24px;
+      margin-bottom: 12px;
+    }
+
+    .hero-card p {
+      margin: 0;
+      color: var(--color-subtext);
+    }
+
+    .mini-stats {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .mini-stats .stat {
+      padding: 16px;
+      border-radius: var(--radius-md);
+      background: rgba(255,255,255,0.9);
+      border: 1px solid rgba(191, 219, 254, 0.9);
+    }
+
+    .mini-stats dt {
+      margin: 0 0 6px;
+      font-size: 13px;
+      color: var(--color-subtext);
+    }
+
+    .mini-stats dd {
+      margin: 0;
+      font-size: 18px;
+      font-weight: 800;
+      color: var(--color-text);
+    }
+
+    main section {
+      padding: 24px 0 56px;
+    }
+
+    .section-heading {
+      margin-bottom: 20px;
+    }
+
+    .section-heading p {
+      margin: 10px 0 0;
+      color: var(--color-subtext);
+    }
+
+    .section-card {
+      padding: 28px;
+    }
+
+    .feature-list,
+    .task-list,
+    .gain-list,
+    .condition-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: grid;
+      gap: 16px;
+    }
+
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 20px;
+    }
+
+    .info-card,
+    .flow-card,
+    .cta-card {
+      padding: 28px;
+    }
+
+    .info-card h3,
+    .flow-card h3,
+    .cta-card h2 {
+      margin-bottom: 16px;
+      font-size: 24px;
+    }
+
+    .flow {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .step {
+      position: relative;
+      padding: 20px;
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-md);
+      background: #fff;
+      min-height: 100%;
+    }
+
+    .step-number {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 36px;
+      height: 36px;
+      border-radius: 999px;
+      background: var(--color-primary);
+      color: #fff;
+      font-weight: 800;
+      margin-bottom: 12px;
+    }
+
+    .step p {
+      margin: 8px 0 0;
+      color: var(--color-subtext);
+      font-size: 14px;
+    }
+
+    .cta-card {
+      margin-bottom: 72px;
+      background: linear-gradient(135deg, #2563EB 0%, #1D4ED8 100%);
+      color: #fff;
+      box-shadow: var(--shadow-md);
+    }
+
+    .cta-card p {
+      margin: 0 0 20px;
+      color: rgba(255,255,255,0.9);
+    }
+
+    .cta-card .btn,
+    .cta-card .btn-secondary {
+      box-shadow: none;
+    }
+
+    .cta-card .btn {
+      background: #fff;
+      color: var(--color-primary-dark);
+    }
+
+    .cta-card .btn-secondary {
+      background: transparent;
+      color: #fff;
+      border-color: rgba(255,255,255,0.4);
+    }
+
+    footer {
+      padding: 24px 0 40px;
+      color: var(--color-subtext);
+    }
+
+    @media (max-width: 960px) {
+      .hero-grid,
+      .info-grid,
+      .flow {
+        grid-template-columns: 1fr;
+      }
+
+      .flow {
+        gap: 12px;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .hero {
+        padding-top: 40px;
+      }
+
+      .hero-copy,
+      .hero-card,
+      .section-card,
+      .info-card,
+      .flow-card,
+      .cta-card {
+        padding: 22px;
+      }
+
+      .header-inner {
+        align-items: flex-start;
+        padding: 14px 0;
+      }
+
+      .header-actions {
+        width: 100%;
+        justify-content: space-between;
+      }
+
+      .mini-stats {
+        grid-template-columns: 1fr;
+      }
+
+      .button-row {
+        flex-direction: column;
+      }
+
+      .btn,
+      .btn-secondary {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="/" aria-label="coderless トップページへ戻る">
+        <img src="https://www.coderless.co.jp/assets/coderless_logo.svg" alt="coderless" />
+      </a>
+      <div class="header-actions">
+        <a class="header-link" href="/">トップへ戻る</a>
+        <a class="btn" href="https://docs.google.com/forms/d/1mkgkbkl72SinbAP6zi3ZdCvVKh2KnNYlt0mZMIZCBP8/preview" target="_blank" rel="noopener">応募する</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <div class="eyebrow"><span class="material-symbols-outlined" aria-hidden="true">rocket_launch</span>未経験OK / リモート可 / 実務で学べる</div>
+          <h1>生成AI×Webシステム開発<br>インターン募集</h1>
+          <p class="lead">生成AIを“仕事の道具”として使いながら、Webシステム開発案件の一部工程を担当していただきます。実践で使う際のレクチャーや、開発過程で社員からのレビューがあるため、未経験でも安心して取り組めます。</p>
+          <ul class="hero-points">
+            <li><span class="material-symbols-outlined" aria-hidden="true">smart_toy</span><span>AIを活用した開発の進め方を、実務ベースで学べます。</span></li>
+            <li><span class="material-symbols-outlined" aria-hidden="true">groups</span><span>少人数チームで、距離の近いフィードバックを受けられます。</span></li>
+            <li><span class="material-symbols-outlined" aria-hidden="true">code_blocks</span><span>要件整理から実装、検証まで一連の流れを体験できます。</span></li>
+          </ul>
+          <div class="button-row">
+            <a class="btn" href="https://docs.google.com/forms/d/1mkgkbkl72SinbAP6zi3ZdCvVKh2KnNYlt0mZMIZCBP8/preview" target="_blank" rel="noopener">今すぐ応募する</a>
+            <a class="btn-secondary" href="#details">募集内容を見る</a>
+          </div>
+        </div>
+
+        <aside class="hero-card" aria-label="募集概要">
+          <div>
+            <h2>募集概要</h2>
+            <p>AI開発の実務フローに触れながら、価値づくりの視点まで学べるインターンです。</p>
+          </div>
+          <dl class="mini-stats">
+            <div class="stat">
+              <dt>期間</dt>
+              <dd>1〜3ヶ月</dd>
+            </div>
+            <div class="stat">
+              <dt>稼働</dt>
+              <dd>週2〜3日</dd>
+            </div>
+            <div class="stat">
+              <dt>勤務形態</dt>
+              <dd>リモート中心</dd>
+            </div>
+            <div class="stat">
+              <dt>報酬</dt>
+              <dd>時給1,400円〜</dd>
+            </div>
+          </dl>
+          <a class="btn" href="#entry">応募方法を見る</a>
+        </aside>
+      </div>
+    </section>
+
+    <section id="details">
+      <div class="container section-card">
+        <div class="section-heading">
+          <h2>このような方向け</h2>
+          <p>未経験の方でも、学びながら挑戦したい気持ちがあれば歓迎です。</p>
+        </div>
+        <ul class="feature-list">
+          <li><span class="material-symbols-outlined" aria-hidden="true">auto_awesome</span><span>AIを使った開発にチャレンジしたい方</span></li>
+          <li><span class="material-symbols-outlined" aria-hidden="true">school</span><span>エンジニア未経験でも、実務を通じて学んでいきたい方</span></li>
+          <li><span class="material-symbols-outlined" aria-hidden="true">account_tree</span><span>物事を整理して、タスクに落とし込むことが得意、または好きな方</span></li>
+          <li><span class="material-symbols-outlined" aria-hidden="true">build</span><span>“作って動かす”ことに興味がある方</span></li>
+          <li><span class="material-symbols-outlined" aria-hidden="true">lightbulb</span><span>実装だけでなく、「誰のどんな課題をどう解くか」といった顧客ニーズの理解にも関心がある方</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <div class="container info-grid">
+        <article class="info-card">
+          <h3>やっていただく事（例）</h3>
+          <ul class="task-list">
+            <li><span class="material-symbols-outlined" aria-hidden="true">fact_check</span><span>お客様要望の整理・タスク分解</span></li>
+            <li><span class="material-symbols-outlined" aria-hidden="true">psychology</span><span>AIへの指示設計（プロンプト改善）→実装（AI生成コードの修正・統合を含む）→動作確認</span></li>
+            <li><span class="material-symbols-outlined" aria-hidden="true">science</span><span>自社開発ツールのテスト・改善提案</span></li>
+          </ul>
+        </article>
+
+        <article class="info-card">
+          <h3>このインターンで得られる事</h3>
+          <ul class="gain-list">
+            <li><span class="material-symbols-outlined" aria-hidden="true">timeline</span><span>企画立案〜要件整理〜実装〜検証まで、AI開発の実務フローを体験できます。</span></li>
+            <li><span class="material-symbols-outlined" aria-hidden="true">terminal</span><span>AIプロンプト設計と実装の両方のスキルが身につきます。</span></li>
+            <li><span class="material-symbols-outlined" aria-hidden="true">forum</span><span>小規模チーム（2〜4名）ならではの近い距離感で、すぐにフィードバックを受けられます。</span></li>
+            <li><span class="material-symbols-outlined" aria-hidden="true">monitoring</span><span>「価値創造」「マーケティング」「データドリブン（データを基に意思決定する考え方）」など、視座の高い学びも得られます。</span></li>
+            <li><span class="material-symbols-outlined" aria-hidden="true">trending_up</span><span>創業初期から成長期にあるベンチャー企業のリアルな現場を体感できます。</span></li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section>
+      <div class="container flow-card">
+        <div class="section-heading">
+          <h2>選考フロー</h2>
+          <p>まずは気軽にご応募ください。相互理解を大切にしながら進めます。</p>
+        </div>
+        <div class="flow" aria-label="選考の流れ">
+          <div class="step">
+            <div class="step-number">1</div>
+            <h3>フォーム応募</h3>
+            <p>応募フォームから必要事項をご入力ください。</p>
+          </div>
+          <div class="step">
+            <div class="step-number">2</div>
+            <h3>カジュアル面談</h3>
+            <p>オンラインで30〜60分程度、取り組みたいことを伺います。</p>
+          </div>
+          <div class="step">
+            <div class="step-number">3</div>
+            <h3>簡単な課題提出</h3>
+            <p>AI実装に関する課題を、60〜120分程度でご対応いただきます。</p>
+          </div>
+          <div class="step">
+            <div class="step-number">4</div>
+            <h3>最終面談</h3>
+            <p>オフラインでお会いし、働き方や期待役割を確認します。</p>
+          </div>
+          <div class="step">
+            <div class="step-number">5</div>
+            <h3>決定</h3>
+            <p>条件確認のうえ、参加開始時期をすり合わせます。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="entry">
+      <div class="container info-grid">
+        <article class="info-card">
+          <h3>条件</h3>
+          <ul class="condition-list">
+            <li><span class="material-symbols-outlined" aria-hidden="true">schedule</span><span><strong>期間：</strong>1〜3ヶ月（延長あり / 長期歓迎）</span></li>
+            <li><span class="material-symbols-outlined" aria-hidden="true">calendar_month</span><span><strong>稼働：</strong>週2〜3日、1日4時間〜。試験や就職活動などの状況も相談可能です。</span></li>
+            <li><span class="material-symbols-outlined" aria-hidden="true">home_work</span><span><strong>働き方：</strong>リモートワーク勤務＋月に数回のオフライン会議あり（都内WeWorkで開催）</span></li>
+            <li><span class="material-symbols-outlined" aria-hidden="true">payments</span><span><strong>報酬：</strong>時給1,400円〜。スキルにより昇給があります。</span></li>
+            <li><span class="material-symbols-outlined" aria-hidden="true">deployed_code</span><span><strong>ツール：</strong>Slack / Google Workspace / GitHub / Cursor / Claude Code / VSCode など</span></li>
+          </ul>
+        </article>
+
+        <aside class="cta-card">
+          <h2>まずはお気軽にご応募ください</h2>
+          <p>「AIを使った開発に興味がある」「実務を通じて成長したい」という方を歓迎します。ご応募後は、カジュアル面談からスタートします。</p>
+          <div class="button-row">
+            <a class="btn" href="https://docs.google.com/forms/d/1mkgkbkl72SinbAP6zi3ZdCvVKh2KnNYlt0mZMIZCBP8/preview" target="_blank" rel="noopener">応募フォームへ進む</a>
+            <a class="btn-secondary" href="mailto:info@coderless.co.jp">質問する</a>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <small>© 2025 coderless inc. All rights reserved.</small>
+    </div>
+  </footer>
+</body>
+</html>
