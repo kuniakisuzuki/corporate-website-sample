@@ -174,7 +174,7 @@ export const POST: APIRoute = async ({ request }) => {
       }
       await writeFile(docsStylesPath, css, 'utf-8');
     } catch (err) {
-      // docs/assets/styles.css がない場合は無視
+      // docs/_assets/styles.css がない場合は無視
     }
 
     return new Response(JSON.stringify({ ok: true }), {
